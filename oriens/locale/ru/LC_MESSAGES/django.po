@@ -1,0 +1,304 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-10 07:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: oriens/templates/404.html:11 oriens/templates/404.html:19
+msgid "Страница не найдена!"
+msgstr "Страница не найдена!"
+
+#: oriens/templates/app.html:24 oriens/templates/home.html:5
+msgid "Главная страница"
+msgstr "Главная страница"
+
+#: oriens/templates/app.html:29 oriens/templates/conferences.html:5
+#: oriens/templates/conferences.html:9
+msgid "Конференции"
+msgstr "Конференции"
+
+#: oriens/templates/app.html:34 oriens/templates/interviews.html:5
+msgid "Интервью"
+msgstr "Интервью"
+
+#: oriens/templates/app.html:39 oriens/templates/archive.html:5
+msgid "Архив"
+msgstr "Архив"
+
+#: oriens/templates/app.html:44 oriens/templates/contact.html:5
+msgid "Связь"
+msgstr "Связь"
+
+#: oriens/templates/app.html:89 oriens/templates/editorial-board.html:5
+msgid "Редколлегия"
+msgstr "Редколлегия"
+
+#: oriens/templates/app.html:90 oriens/templates/requirements.html:5
+#: oriens/templates/requirements.html:10
+msgid "Требования к статье"
+msgstr "Требования к статье"
+
+#: oriens/templates/app.html:91 oriens/templates/letter-en.html:5
+#: oriens/templates/letter-en.html:9 oriens/templates/letter-ru.html:5
+#: oriens/templates/letter-ru.html:9 oriens/templates/letter-uz.html:5
+#: oriens/templates/letter-uz.html:9
+msgid "Информационное письмо"
+msgstr "Информационное письмо"
+
+#: oriens/templates/app.html:92 oriens/templates/offer.html:5
+msgid "Публичная оферта"
+msgstr "Публичная оферта"
+
+#: oriens/templates/app.html:93 oriens/templates/services.html:5
+msgid "Услуги"
+msgstr "Услуги"
+
+#: oriens/templates/app.html:97
+msgid "Индексы журналов"
+msgstr "Индексы журналов"
+
+#: oriens/templates/app.html:109
+msgid "Популярные статьи"
+msgstr "Популярные статьи"
+
+#: oriens/templates/app.html:120
+msgid "Главный редактор"
+msgstr "Главный редактор"
+
+#: oriens/templates/app.html:127
+msgid "Кадиров Мухаммаджон"
+msgstr "Кадиров Мухаммаджон"
+
+#: oriens/templates/app.html:149
+msgid ""
+"Адрес: Ташкентская область, город Нурафшон, СЖР Кумарык, проспект Кумарык, 23"
+msgstr ""
+"Адрес: Ташкентская область, город Нурафшон, СЖР Кумарык, проспект Кумарык, 23"
+
+#: oriens/templates/app.html:152 oriens/templates/contact.html:32
+msgid "Телефон:"
+msgstr "Телефон:"
+
+#: oriens/templates/app.html:157
+msgid "Почта:"
+msgstr "Почта:"
+
+#: oriens/templates/archive.html:9
+msgid "Архив всех журналов"
+msgstr "Архив всех журналов"
+
+#: oriens/templates/archive.html:25 oriens/templates/home.html:53
+msgid ""
+"Журнал “Oriental Renaissance: Innovative, Educational, Natural and Social "
+"sciences”."
+msgstr ""
+"Журнал “Oriental Renaissance: Innovative, Educational, Natural and Social "
+"sciences”."
+
+#: oriens/templates/archive.html:25 oriens/templates/home.html:53
+msgid "Выпуск"
+msgstr "Выпуск"
+
+#: oriens/templates/archive.html:35 oriens/templates/conferences.html:35
+#: oriens/templates/editorial-board.html:36
+msgid "Первый"
+msgstr ""
+
+#: oriens/templates/archive.html:71 oriens/templates/conferences.html:71
+#: oriens/templates/editorial-board.html:72
+msgid "Последний"
+msgstr "Последний"
+
+#: oriens/templates/article.html:25 oriens/templates/journal.html:38
+msgid "Автор"
+msgstr "Автор"
+
+#: oriens/templates/article.html:39 oriens/templates/conference.html:25
+#: oriens/templates/journal.html:25
+msgid "Скачать"
+msgstr "Скачать"
+
+#: oriens/templates/article.html:50 oriens/templates/conference.html:46
+#: oriens/templates/journal.html:50
+msgid "Статья"
+msgstr "Статья"
+
+#: oriens/templates/conference.html:30 oriens/templates/journal.html:30
+msgid "Статьи журнала"
+msgstr "Статьи журнала"
+
+#: oriens/templates/contact.html:10
+msgid "Ваше сообщение отправлено"
+msgstr "Ваше сообщение отправлено"
+
+#: oriens/templates/contact.html:12
+msgid "Оставьте нам своё сообщение"
+msgstr "Оставьте нам своё сообщение"
+
+#: oriens/templates/contact.html:26 oriens/templates/send_article.html:37
+msgid "Отправить"
+msgstr "Отправить"
+
+#: oriens/templates/contact.html:28
+msgid "Или свяжитесь с нами"
+msgstr "Или свяжитесь с нами"
+
+#: oriens/templates/editorial-board.html:10
+msgid "Редколлегия научного журнала ORIENS"
+msgstr "Редколлегия научного журнала ORIENS"
+
+#: oriens/templates/get_article.html:11
+msgid "Поиск статьи"
+msgstr "Поиск статьи"
+
+#: oriens/templates/get_article.html:17
+msgid "Статья под данным токеном уже оплачена"
+msgstr "Статья под данным токеном уже оплачена"
+
+#: oriens/templates/get_article.html:22
+msgid "Статья под данным токеном не существует"
+msgstr "Статья под данным токеном не существует"
+
+#: oriens/templates/get_article.html:37
+msgid "Оплата статьи"
+msgstr "Оплата статьи"
+
+#: oriens/templates/get_article.html:42
+msgid "Перейти к оплате"
+msgstr "Перейти к оплате"
+
+#: oriens/templates/home.html:25
+msgid "Давайте вместе покорим Эверест науки"
+msgstr "Давайте вместе покорим Эверест науки"
+
+#: oriens/templates/home.html:36
+msgid "Новый выпуск"
+msgstr "Новый выпуск"
+
+#: oriens/templates/home.html:60
+msgid "Все выпуски"
+msgstr "Все выпуски"
+
+#: oriens/templates/home.html:63
+msgid ""
+"Журнал “Oriental Renaissance: Innovative, Educational, Natural and Social "
+"sciences” освещает результаты исследований в следующих областях:"
+msgstr ""
+"Журнал “Oriental Renaissance: Innovative, Educational, Natural and Social "
+"sciences” освещает результаты исследований в следующих областях:"
+
+#: oriens/templates/home.html:68
+msgid "Точные науки"
+msgstr "Точные науки"
+
+#: oriens/templates/home.html:71
+msgid "Естественные науки"
+msgstr "Естественные науки"
+
+#: oriens/templates/home.html:74
+msgid "Технические науки"
+msgstr "Технические науки"
+
+#: oriens/templates/home.html:77
+msgid "Педагогические науки"
+msgstr "Педагогические науки"
+
+#: oriens/templates/home.html:82
+msgid "Социально-гуманитарные науки"
+msgstr "Социально-гуманитарные науки"
+
+#: oriens/templates/home.html:85
+msgid "Философские науки"
+msgstr "Философские науки"
+
+#: oriens/templates/home.html:88
+msgid "Филологические науки"
+msgstr "Филологические науки"
+
+#: oriens/templates/home.html:91
+msgid "Экономические науки"
+msgstr "Экономические науки"
+
+#: oriens/templates/home.html:97
+msgid "О журнале"
+msgstr "О журнале"
+
+#: oriens/templates/home.html:99
+msgid ""
+"Научный журнал “Oriental Renaissance: Innovative, Educational, Natural and "
+"Social sciences” является открытым журналом. Основная задача журнала - "
+"освещать достижения и перспективы мировой науки и образования в процессе "
+"моделирования “Третьего Возрождения”, актуальные проблемы и пути их решения, "
+"а также историю и этапы развития науки и образования. Целью журнала "
+"“Oriental Renaissance: Innovative, Educational, Natural and Social sciences” "
+"является информирование научного сообщества об исследованиях и инновациях "
+"экспертов и ученых в конкретных областях, повышение интереса молодого "
+"поколения к науке и образованию и объяснять научные концепции."
+msgstr ""
+"Научный журнал “Oriental Renaissance: Innovative, Educational, Natural and "
+"Social sciences” является открытым журналом. Основная задача журнала - "
+"освещать достижения и перспективы мировой науки и образования в процессе "
+"моделирования “Третьего Возрождения”, актуальные проблемы и пути их решения, "
+"а также историю и этапы развития науки и образования. Целью журнала "
+"“Oriental Renaissance: Innovative, Educational, Natural and Social sciences” "
+"является информирование научного сообщества об исследованиях и инновациях "
+"экспертов и ученых в конкретных областях, повышение интереса молодого "
+"поколения к науке и образованию и объяснять научные концепции."
+
+#: oriens/templates/requirements.html:13
+msgid "Скачать в формате docx"
+msgstr "Скачать в формате docx"
+
+#: oriens/templates/requirements.html:16
+msgid "Скачать в формате pdf"
+msgstr "Скачать в формате pdf"
+
+#: oriens/templates/send_article.html:5 oriens/templates/services.html:13
+msgid "Отправить статью"
+msgstr "Отправить статью"
+
+#: oriens/templates/send_article.html:11
+msgid "Ваша статья принята. Мы свяжемся с вами."
+msgstr "Ваша статья принята. Мы свяжемся с вами."
+
+#: oriens/templates/send_article.html:13
+msgid "Для осуществления оплаты вам требуется использовать данный токен: "
+msgstr "Для осуществления оплаты вам требуется использовать данный токен: "
+
+#: oriens/templates/send_article.html:16
+msgid "Публикация статьи на сайте"
+msgstr "Публикация статьи на сайте"
+
+#: oriens/templates/send_article.html:18
+msgid "Цена услуги: 150 000 сум"
+msgstr "Цена услуги: 150 000 сум"
+
+#: oriens/templates/send_article.html:20
+msgid ""
+"Если вы желаете опубликовать свою статью на сайте, заполните форму ниже:"
+msgstr ""
+"Если вы желаете опубликовать свою статью на сайте, заполните форму ниже:"
+
+#: oriens/templates/services.html:10
+msgid "Выберите тип услуги"
+msgstr "Выберите тип услуги"
+
+#: oriens/templates/services.html:16
+msgid "Оплата за публикацию статьи"
+msgstr "Оплата за публикацию статьи"

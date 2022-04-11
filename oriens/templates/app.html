@@ -1,0 +1,174 @@
+{% load static i18n %}
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'img/logo.png' %}" rel="icon">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <title>{% block title %}{% endblock %} - ORIENS</title>
+</head>
+<body>
+    <nav class="navbar my_header navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'baseapp:index' %}">ORIENS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/uz/' or request.path == '/ru/' or request.path == '/en/' %}active{% else %}{% endif %}" aria-current="page" href="{% url 'baseapp:index' %}">
+                            {% trans "Главная страница" %}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if '/conferences/' in request.path or '/conference/' in request.path or '/conference/article/' in request.path %}active{% else %}{% endif %}" href="{% url 'baseapp:conferences' page=1 %}">
+                            {% trans "Конференции" %}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if '/interviews/' in request.path %}active{% else %}{% endif %}" href="{% url 'baseapp:interviews' %}">
+                            {% trans "Интервью" %}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if '/archive/' in request.path or '/journal/' in request.path or '/journal/article/' in request.path %}active{% else %}{% endif %}" href="{% url 'baseapp:archive' page=1 %}">
+                            {% trans "Архив" %}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if '/contact/' in request.path %}active{% else %}{% endif %}" href="{% url 'baseapp:contact' %}">
+                            {% trans "Связь" %}
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex" method="post">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% if LANGUAGE_CODE == 'uz' %}
+                                    O'zbekcha
+                                {% elif LANGUAGE_CODE == 'ru' %}
+                                    Русский
+                                {% elif LANGUAGE_CODE == 'en' %}
+                                    English
+                                {% endif %}
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'set_language' user_language="uz" %}">O'zbekcha</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'set_language' user_language="ru" %}">Русский</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'set_language' user_language="en" %}">English</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+    {% block parallax %}{% endblock %}
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-12">
+                    {% block content %}{% endblock %}
+                    &nbsp;
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <div class="sidebar">
+                        <div class="sidebarblock">
+                            <a class="sub_block" href="{% url 'baseapp:editboard' page=1 %}">{% trans "Редколлегия" %}</a>
+                            <a class="sub_block" href="{% url 'baseapp:requirements' %}">{% trans "Требования к статье" %}</a>
+                            <a class="sub_block" href="{% url 'baseapp:letter' %}">{% trans "Информационное письмо" %}</a>
+                            <a class="sub_block" href="{% url 'baseapp:offer' %}">{% trans "Публичная оферта" %}</a>
+                            <a class="sub_block" href="{% url 'baseapp:services' %}">{% trans "Услуги" %}</a>
+                        </div>
+                        <div class="sidebarblock">
+                            <div class="title">
+                                {% trans "Индексы журналов" %}
+                            </div>
+                            <div class="text-center">
+                                {% for index in indexes %}
+                                    <a class="index" href="{{ index.url }}" target="_blank">
+                                        <img height="35px" src="/media/{{ index.logo }}">
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="sidebarblock">
+                            <div class="title">
+                                {% trans "Популярные статьи" %}
+                            </div>
+                            <div class="popular">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% for article in popular_articles %}
+                                    <a href="{% url 'baseapp:journal_article' article.slug %}">{{ article.name }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="sidebarblock">
+                            <div class="title">
+                                {% trans "Главный редактор" %}
+                            </div>
+                            <div class="main_editor">
+                                <div>
+                                    <img src="{% static 'img/head-editor.jpg' %}">
+                                </div>
+                                <p>
+                                    {% trans "Кадиров Мухаммаджон" %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my_footer">
+        <footer class="footer mt-auto py-2 px-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <span>ORIENS.UZ</span>
+                        <div class="img">
+                            <img width="100px" src="{% static 'img/OR.png' %}">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="footer_data">
+                            {% trans "Адрес: Ташкентская область, город Нурафшон, СЖР Кумарык, проспект Кумарык, 23" %}
+                        </div>
+                        <div class="footer_data">
+                            {% trans "Телефон:" %} <a href="tel:+998990841423">+998990841423</a><br>
+                            <a href="tel:+998998288040">+998998288040</a><br>
+                            <a href="tel:+998998990964">+998998990964</a>
+                        </div>
+                        <div class="footer_data">
+                            {% trans "Почта:" %} <a href="mailto:academic.reserch@mail.ru">info@oriens.uz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="pre_footer px-3 py-2">
+            <a href="https://www.instagram.com/blurcode.studio/" target="_blank">
+                <img height="30px" src="{% static 'img/bc-logo.png' %}">
+            </a>
+            <a class="developers" href="https://www.instagram.com/blurcode.studio/" target="_blank">Powered by BlurCode Studio</a>
+        </div>
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/parallax.min.js' %}"></script>
+</body>
+</html>

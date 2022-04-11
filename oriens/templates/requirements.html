@@ -1,0 +1,18 @@
+{% extends 'app.html' %}
+{% load static i18n %}
+
+{% block title %}
+    {% trans "Требования к статье" %}
+{% endblock %}
+
+{% block content %}
+    <div class="title">
+        ORIENS.UZ {% trans "Требования к статье" %}
+    </div>
+    <div class="docs">
+        <a href="/media/content/maqola_talablari.docx" class="btn my_btn" target="_blank">{% trans "Скачать в формате docx" %}</a>
+        <br>
+        <br>
+        <a href="/media/content/maqola_talablari.pdf" class="btn my_btn" target="_blank">{% trans "Скачать в формате pdf" %}</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'app.html' %}
+{% load static i18n %}
+
+{% block title %}
+    {% trans "Информационное письмо" %}
+{% endblock %}
+
+{% block content %}
+    <div class="title">{% trans "Информационное письмо" %}</div>
+    <div class="Axborot_text">
+        <p>To fulfill the tasks stipulated by the Decree of the President of the Republic of Uzbekistan dated November 6, 2020 PF-6108 "On measures for the development of education and science in a new period of development of Uzbekistan",the acceptance of articles in 1 issue of the scientific journal <strong>"ORIENTAL RENAISSANCE: INNOVATIVE, EDUCATIONAL, NATURAL AND SOCIAL SCIENCES (ORIENS)"</strong> (Certificate of the Agency for the Development of Information and Mass Communications under the Administration of the President of the Republic of Uzbekistan No. 1391, <a href="{% url 'baseapp:index' %}">oriens.uz</a>) has been announced.</p>
+        <strong>The journal accepts articles in the following areas:</strong>
+        <ol>
+            <li>Exact sciences</li>
+            <li>Natural sciences</li>
+            <li>Technical sciences</li>
+            <li>Pedagogical sciences</li>
+            <li>Social and Human Sciences</li>
+            <li>Philosophical sciences</li>
+            <li>Philological sciences</li>
+            <li>Economic sciences</li>
+        </ol>
+        <strong>Note to the authors of the article: <a href="/media/content/axborot_xati_eng.docx" class="btn my_btn" target="_blank">Download</a></strong>
+    </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'app.html' %}
+{% load static i18n %}
+
+{% block title %}
+    {% trans "Информационное письмо" %}
+{% endblock %}
+
+{% block content %}
+    <div class="title">{% trans "Информационное письмо" %}</div>
+    <div class="Axborot_text">
+        <p>O‘zbekiston Respublikasi Prezidentining 2020 yil 6 noyabrdagi “O‘zbekistonning yangi taraqqiyot davrida ta’lim-tarbiya va ilm-fan sohalarini rivojlantirish chora-tadbirlari to‘g‘risida”gi PF-6108-sonli Farmonida ko‘zda tutilgan vazifalarni ijrosini ta’minlash maqsadida   “Oriental Renessans” MChJ tomonidan ta’sis etilgan <strong>“ORIENTAL RENAISSANCE: INNOVATIVE, EDUCATIONAL, NATURAL AND SOCIAL SCIENCES (ORIENS)”</strong> ilmiy jurnali (O‘zbekiston Respublikasi Prezidenti Administratsiyasi huzuridagi Axborot va ommaviy kommunikasiyalarni rivojlantirish agentligining 1391-sonli Guvohnoma hamda ISSN 2181-1784, <a href="{% url 'baseapp:index' %}">www.oriens.uz</a> veb sayti) <strong>SJIF 2021=5.423 Impact factorga </strong>ega bo’lib,<strong> 6-soni</strong> uchun maqolalar qabulini e’lon qiladi.</p>
+        <strong>Jurnalga quyidagi yo‘nalishlar bo‘yicha maqolalar qabul qilinadi:</strong>
+        <ol>
+            <li>Aniq fanlar</li>
+            <li>Tabiiy fanlar</li>
+            <li>Texnika fanlari</li>
+            <li>Pedagogika fanlari</li>
+            <li>Ijtimoiy-gumanitar fanlar</li>
+            <li>Falsafa fanlari</li>
+            <li>Filologiya fanlari</li>
+            <li>Iqtisod fanlari</li>
+        </ol>
+        <p><strong>Maqola mualliflariga eslatma:</strong></p>
+        <p>- Maqolalar <strong>o‘zbek, rus va ingliz tillarida</strong> qabul qilinadi;</p>
+        <p>- Maqolalarni 2021-yilning 1-iyuldan – 29-iyul kuniga qadar elektron shaklda: Telegram: <strong>+998998288040</strong> <a href="https://t.me/OrientalRenessansLLC">@OrientalRenessansLLC</a> telegram manzili yoki <a href="mailto:academic.reserch@mail.ru">info@oriens.uz</a> elektron pochtasiga yuborishingiz mumkin. Murojat uchun Telefon raqami +998990841423;</p>
+        <ul>
+            <li>Yuborilgan ilmiy maqolalar tahrir hay’ati tomonidan ko‘rib chiqiladi va tahrirdan o‘tmagan, talablar bo‘yicha yuborilmagan maqolalar nashr etilmaydi.</li>
+            <li>Jurnalga professor-o‘qituvchilar, doktorantlar, mustaqil izlanuvchilar, magistrantlar, iqtidorli talabalar maqolalar yuborishlari mumkin.</li>
+            <li>Jurnalga qabul qilingan maqolalar <strong>4 kun ichida jurnal web sayti (<a href="{% url 'baseapp:index' %}" target="_blank">oriens.uz</a>) 6-soni sahifasiga joylanadi</strong> hamda muallifga maqola havolasi taqdim etiladi. <strong>Har bir maqola Google Scholarda indekslanadi va Cyberleninka.ru saytiga joylanadi.</strong></li>
+            <li>Jurnalning to‘plam shakli 2021-yil 1-avgust kuni <a href="{% url 'baseapp:index' %}" target="_blank">oriens.uz</a>  veb saytiga ва <a href="https://t.me/oriens_uz" target="_blank">https://t.me/oriens_uz</a> telegram kanaliga joylashtiriladi. Mualliflarning har biriga elektron sertifikatlar taqdim etiladi.</li>
+        </ul>
+        <strong>Taqdim etiladigan maqolalarga qo‘yiladigan talablarni <a href="/media/content/axborot_xati_uzb.docx" class="btn my_btn" target="_blank">ko'chirib oling</a></strong>
+    </div>
+{% endblock %}

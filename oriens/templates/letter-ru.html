@@ -1,0 +1,34 @@
+{% extends 'app.html' %}
+{% load static i18n %}
+
+{% block title %}
+    {% trans "Информационное письмо" %}
+{% endblock %}
+
+{% block content %}
+    <div class="title">{% trans "Информационное письмо" %}</div>
+    <div class="Axborot_text">
+        <p>В целях исполнения задач, предусмотренных Указом Президента Республики Узбекистан от 6 ноября 2020 года ПФ-6108 “О мерах по развитию образования и науки в новый период развития Узбекистана” Научный журнал <strong>“ORIENTAL RENAISSANCE: INNOVATIVE, EDUCATIONAL, NATURAL AND SOCIAL SCIENCES (oriens)”</strong>, учрежденный ООО “Oriental Renessans” (Свидетельство № 1391 Агентства по развитию информации и массовых коммуникаций при Администрации Президента Республики Узбекистан) ISSN 2181-1784, сайт <a href="{% url 'baseapp:index' %}">www.oriens.uz</a> ) <strong>SJIF 2021 = 5,423 Импакт-фактор</strong>, будет объявлен прием статей в <strong>6-выпуск</strong>.</p>
+        <strong>Журнал принимает статьи по следующим направлениям:</strong>
+        <ol>
+            <li>Точные науки</li>
+            <li>Естественные науки</li>
+            <li>Технические науки</li>
+            <li>Педагогические науки</li>
+            <li>Социальные и гуманитарные науки</li>
+            <li>Философские науки</li>
+            <li>Филологические науки.</li>
+            <li>Экономика</li>
+        </ol>
+        <p>Примечание для авторов статьи:</p>
+        <p>- Статьи принимаются на узбекском, русском и английском языках;</p>
+        <p>- Статьи можно отправлять в электронном виде с 1 по  29 июля 2021 года: Telegram: <strong>+998998288040</strong> <a href="https://t.me/OrientalRenessansLLC">@OrientalRenessansLLC</a> telegram или <a href="mailto:academic.reserch@mail.ru">info@oriens.uz</a>; Контактный телефон +998990841423;</p>
+        <ul>
+            <li>Представленные научные статьи будут рассматриваться редакционной коллегией, а неотредактированные и неотредактированные статьи не будут опубликованы.</li>
+            <li>Статьи в журнал могут подавать профессора, докторанты, независимые исследователи, магистры, талантливые студенты.</li>
+            <li>Статьи, принятые в журнал, <strong>будут размещены на сайте журнала (</strong><a href="{% url 'baseapp:index' %}" target="_blank">oriens.uz</a>) №6 в течение 4 дней</strong>, а автору будет предоставлена ​​ссылка на статью. <strong>Каждая статья проиндексирована в Google Scholar и размещена на Cyberleninka.ru</strong></li>
+            <li>Анкета журнала будет размещена 30 июля 2021 года на сайте <a href="{% url 'baseapp:index' %}" target="_blank">oriens.uz</a> и в телеграм-канале <a href="https://t.me/oriens_uz" target="_blank">https://t.me/oriens_uz</a>. Каждый автор получит электронный сертификат.</li>
+        </ul>
+        <strong>Требования к подаче статей и тезисов на конференцию <a href="/media/content/axborot_xati_rus.docx" class="btn my_btn" target="_blank">Скачать</a></strong>
+    </div>
+{% endblock %}

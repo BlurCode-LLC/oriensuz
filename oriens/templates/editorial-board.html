@@ -1,0 +1,76 @@
+{% extends 'app.html' %}
+{% load static i18n %}
+
+{% block title %}
+    {% trans "Редколлегия" %}
+{% endblock %}
+
+{% block content %}
+    {% get_current_language as LANGUAGE_CODE %}
+    <div class="title">{% trans "Редколлегия научного журнала ORIENS" %}</div>
+    <div class="table">
+        <table>
+            {% for editor in editors_obj %}
+                <tr>
+                    <th><img src="/media/{{ editor.image }}"></th>
+                    {% if LANGUAGE_CODE == 'uz' %}
+                        <th><b>{{ editor.name_uz }}</b></th>
+                        <th>{{ editor.role_uz }}</th>
+                        <th>{{ editor.about_uz }}</th>
+                    {% elif LANGUAGE_CODE == 'ru' %}
+                        <th><b>{{ editor.name_ru }}</b></th>
+                        <th>{{ editor.role_ru }}</th>
+                        <th>{{ editor.about_ru }}</th>
+                    {% elif LANGUAGE_CODE == 'en' %}
+                        <th><b>{{ editor.name_en }}</b></th>
+                        <th>{{ editor.role_en }}</th>
+                        <th>{{ editor.about_en }}</th>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <nav>
+        <ul class="pagination justify-content-center">
+            <li class="page-item {% if not editors_obj.has_previous %}disabled{% endif %}">
+                <a class="page-link" href="{% url 'baseapp:editboard' page=1 %}" tabindex="-1" aria-disabled="true">{% trans "Первый" %}</a>
+            </li>
+            {% if previous_2_page_number > 0 %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="...">...</a>
+                </li>
+            {% endif %}
+            {% if not editors_obj.has_next and previous_2_page_number > 0 %}
+                <li class="page-item">
+                    <a class="page-link" href="{% url 'baseapp:editboard' page=previous_2_page_number %}">{{ previous_2_page_number }}</a>
+                </li>
+            {% endif %}
+            {% if editors_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="{% url 'baseapp:editboard' page=editors_obj.previous_page_number %}">{{ editors_obj.previous_page_number }}</a>
+                </li>
+            {% endif %}
+            <li class="page-item active" aria-current="page">
+                <a class="page-link">{{ editors_obj.number }}</a>
+            </li>
+            {% if editors_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="{% url 'baseapp:editboard' page=editors_obj.next_page_number %}">{{ editors_obj.next_page_number }}</a>
+                </li>
+            {% endif %}
+            {% if not editors_obj.has_previous and next_2_page_number <= editors_obj.paginator.num_pages %}
+                <li class="page-item">
+                    <a class="page-link" href="{% url 'baseapp:editboard' page=next_2_page_number %}">{{ next_2_page_number }}</a>
+                </li>
+            {% endif %}
+            {% if next_2_page_number <= editors_obj.paginator.num_pages %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="...">...</a>
+                </li>
+            {% endif %}
+            <li class="page-item {% if not editors_obj.has_next %}disabled{% endif %}">
+                <a class="page-link" href="{% url 'baseapp:editboard' page=editors_obj.paginator.num_pages %}">{% trans "Последний" %}</a>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}

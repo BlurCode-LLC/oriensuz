@@ -1,0 +1,51 @@
+{% extends 'app.html' %}
+{% load static i18n %}
+
+{% block title %}
+    {% trans "Связь" %}
+{% endblock %}
+
+{% block content %}
+    {% if is_left %}
+        <div class="alert alert-success">{% trans "Ваше сообщение отправлено" %}</div>
+    {% endif %}
+    <div class="title">{% trans "Оставьте нам своё сообщение" %}</div>
+    <form method="post">
+        {% csrf_token %}
+        {% for field in messageform %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger">
+                    {{ error }}
+                </div>
+            {% endfor %}
+            <div class="input-group mb-3">
+                <span class="input-group-text">{{ field.label_tag }}</span>
+                {{ field }}
+            </div>
+        {% endfor %}
+        <input type="submit" value="{% trans "Отправить" %}" name="submit_button" class="my_btn">
+    </form>
+    <div class="title">{% trans "Или свяжитесь с нами" %}</div>
+    <div class="row">
+        <div class="col-xl-4 col-md-4 col-sm-4">
+            <div class="contacts">
+                <h5>{% trans "Телефон:" %}</h5>
+                <a href="tel:+998990841423">+998990841423</a><br>
+                <a href="tel:+998998288040">+998998288040</a><br>
+                <a href="tel:+998998990964">+998998990964</a>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-4 col-sm-4">
+            <div class="contacts">
+                <h5>E-mail:</h5>
+                <a href="mailto:academic.reserch@mail.ru">info@oriens.uz</a>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-4 col-sm-4">
+            <div class="contacts">
+                <h5>Telegram:</h5>
+                <a href="https:/t.me/oriens_uz" target="_blank">oriens_uz</a>
+            </div>
+        </div>          
+    </div>
+{% endblock %}

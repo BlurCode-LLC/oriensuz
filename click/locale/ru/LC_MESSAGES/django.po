@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-10 07:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: click/utils.py:50
+msgid "Error in request from click"
+msgstr ""
+
+#: click/utils.py:62
+msgid "SIGN CHECK FAILED!"
+msgstr ""
+
+#: click/utils.py:68
+msgid "Action not found"
+msgstr ""
+
+#: click/utils.py:75
+msgid "User does not exist"
+msgstr ""
+
+#: click/utils.py:81
+msgid "Incorrect parameter amount"
+msgstr ""
+
+#: click/utils.py:87
+msgid "Already paid"
+msgstr ""
+
+#: click/utils.py:94
+msgid "Transaction not found"
+msgstr ""
+
+#: click/utils.py:100
+msgid "Transaction cancelled"
+msgstr ""

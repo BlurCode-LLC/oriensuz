@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-10 07:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: baseapp/admin.py:11 baseapp/admin.py:12
+msgid "Администрирование сайта ORIENS"
+msgstr "Администрирование сайта ORIENS"
+
+#: baseapp/apps.py:8
+msgid "Основные данные"
+msgstr "Основные данные"
+
+#: baseapp/forms.py:6
+msgid "Имя"
+msgstr "Имя"
+
+#: baseapp/forms.py:10
+msgid "Ваше имя"
+msgstr "Ваше имя"
+
+#: baseapp/forms.py:16
+msgid "E-mail"
+msgstr ""
+
+#: baseapp/forms.py:20
+msgid "Ваш e-mail"
+msgstr "Ваш e-mail"
+
+#: baseapp/forms.py:26 baseapp/forms.py:30
+msgid "Тема"
+msgstr "Тема"
+
+#: baseapp/forms.py:36
+msgid "Подробнее"
+msgstr "Подробнее"
+
+#: baseapp/forms.py:48
+msgid "ФИО"
+msgstr "ФИО"
+
+#: baseapp/forms.py:52
+msgid "Ваше ФИО"
+msgstr "Ваше ФИО"
+
+#: baseapp/forms.py:58
+msgid "Номер телефона"
+msgstr "Номер телефона"
+
+#: baseapp/forms.py:62
+msgid "Ваш номер телефона"
+msgstr "Ваш номер телефона"
+
+#: baseapp/forms.py:68
+msgid "Название статьи"
+msgstr "Название статьи"
+
+#: baseapp/forms.py:72
+msgid "Название вашей статьи"
+msgstr "Название вашей статьи"
+
+#: baseapp/forms.py:89 baseapp/forms.py:94
+msgid "Токен статьи"
+msgstr "Токен статьи"
+
+#: baseapp/views.py:57 baseapp/views.py:258 baseapp/views.py:308
+#: baseapp/views.py:332 baseapp/views.py:354 baseapp/views.py:376
+#: baseapp/views.py:400
+msgid "Страница не найдена!"
+msgstr "Страница не найдена!"
+
+#: baseapp/views.py:233 baseapp/views.py:235
+msgid "Данная статья не существует!"
+msgstr "Данная статья не существует!"

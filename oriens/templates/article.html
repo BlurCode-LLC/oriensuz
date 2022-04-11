@@ -1,0 +1,54 @@
+{% extends 'app.html' %}
+{% load static i18n time_format %}
+
+
+{% block title %}
+    {{ article.name }}
+{% endblock %}
+
+{% block content %}
+    {% get_current_language as LANGUAGE_CODE %}
+    <div class="last_posts_div">
+        <div class="single-header">
+            <div class="single-header__meta">
+                <div class="date">{% time_format article.published_date %}</div>
+                <div class="view">{{ article.views }}</div>
+            </div>
+            <div class="single-header__title">{{ article.name }}</div>
+        </div>
+        <div class="single-content">
+            <div class="main-img">
+                <iframe src="/media/{{ article.file }}" width="100%" height="600px"></iframe>
+                <div class="main-img__caption"></div>
+            </div>
+            <div class="info_text">
+                <p><span>{% trans "Автор" %}:</span> {{ article.author }}</p>
+                {% if LANGUAGE_CODE == 'uz' %}
+                    <p><span>Annotatsiya:</span> {{ article.annotation_uz }}</p>
+                    <p><span>Kalit so'zlar:</span> {{ article.keywords_uz }}</p>
+                {% elif LANGUAGE_CODE == 'ru' %}
+                    <p><span>Аннотация:</span> {{ article.annotation_ru }}</p>
+                    <p><span>Ключевые слова:</span> {{ article.keywords_ru }}</p>
+                {% elif LANGUAGE_CODE == 'en' %}
+                    <p><span>Annotation:</span> {{ article.annotation_en }}</p>
+                    <p><span>Keywords:</span> {{ article.keywords_en }}</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row article">
+            <p>{% trans "Скачать" %}</p>
+            <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-6">
+                {% if LANGUAGE_CODE == 'uz' %}
+                    <a href="/media/{{ article.file }}" class="btn my_btn" target="_blank">Annotatsiya</a>
+                {% elif LANGUAGE_CODE == 'ru' %}
+                    <a href="/media/{{ article.file }}" class="btn my_btn" target="_blank">Аннотация</a>
+                {% elif LANGUAGE_CODE == 'en' %}
+                    <a href="/media/{{ article.file }}" class="btn my_btn" target="_blank">Annotation</a>
+                {% endif %}
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-6">
+                <a href="/media/{{ article.file }}" class="btn my_btn" target="_blank">{% trans "Статья" %}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

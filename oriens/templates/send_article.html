@@ -1,0 +1,37 @@
+{% extends 'app.html' %}
+{% load static i18n %}
+
+{% block title %}
+    {% trans "Отправить статью" %}
+{% endblock %}
+
+{% block content %}
+    {% if is_left %}
+        <div class="alert alert-success">
+            {% trans "Ваша статья принята. Мы свяжемся с вами." %}
+            <br>
+            {% trans "Для осуществления оплаты вам требуется использовать данный токен: " %}{{ token }}
+        </div>
+    {% endif %}
+    <div class="title">{% trans "Публикация статьи на сайте" %}</div>
+    <div class="about">
+        <p>{% trans "Если вы желаете опубликовать свою статью на сайте, заполните форму ниже:" %}</p>
+    </div>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for field in articleform %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger">
+                    {{ error }}
+                </div>
+            {% endfor %}
+            <div class="input-group mb-3">
+                {% if field.name != 'file' %}
+                    <span class="input-group-text">{{ field.label_tag }}</span>
+                {% endif %}
+                {{ field }}
+            </div>
+        {% endfor %}
+        <input type="submit" value="{% trans "Отправить" %}" name="submit_button" class="my_btn">
+    </form>
+{% endblock %}

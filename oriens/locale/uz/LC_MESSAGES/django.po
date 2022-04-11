@@ -1,0 +1,305 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-10 07:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: oriens/templates/404.html:11 oriens/templates/404.html:19
+msgid "Страница не найдена!"
+msgstr "Sahifa topilmadi!"
+
+#: oriens/templates/app.html:24 oriens/templates/home.html:5
+msgid "Главная страница"
+msgstr "Bosh sahifa"
+
+#: oriens/templates/app.html:29 oriens/templates/conferences.html:5
+#: oriens/templates/conferences.html:9
+msgid "Конференции"
+msgstr "Konferensiyalar"
+
+#: oriens/templates/app.html:34 oriens/templates/interviews.html:5
+msgid "Интервью"
+msgstr "Intervyular"
+
+#: oriens/templates/app.html:39 oriens/templates/archive.html:5
+msgid "Архив"
+msgstr "Arxiv"
+
+#: oriens/templates/app.html:44 oriens/templates/contact.html:5
+msgid "Связь"
+msgstr "Aloqa"
+
+#: oriens/templates/app.html:89 oriens/templates/editorial-board.html:5
+msgid "Редколлегия"
+msgstr "Tahrir hay'ati"
+
+#: oriens/templates/app.html:90 oriens/templates/requirements.html:5
+#: oriens/templates/requirements.html:10
+msgid "Требования к статье"
+msgstr "Maqola talablari"
+
+#: oriens/templates/app.html:91 oriens/templates/letter-en.html:5
+#: oriens/templates/letter-en.html:9 oriens/templates/letter-ru.html:5
+#: oriens/templates/letter-ru.html:9 oriens/templates/letter-uz.html:5
+#: oriens/templates/letter-uz.html:9
+msgid "Информационное письмо"
+msgstr "Axborot xati"
+
+#: oriens/templates/app.html:92 oriens/templates/offer.html:5
+msgid "Публичная оферта"
+msgstr "Ommaviy offerta"
+
+#: oriens/templates/app.html:93 oriens/templates/services.html:5
+msgid "Услуги"
+msgstr "Xizmatlar"
+
+#: oriens/templates/app.html:97
+msgid "Индексы журналов"
+msgstr "Jurnal indekslari"
+
+#: oriens/templates/app.html:109
+msgid "Популярные статьи"
+msgstr "Ommabop maqolalar"
+
+#: oriens/templates/app.html:120
+msgid "Главный редактор"
+msgstr "Bosh muharrir"
+
+#: oriens/templates/app.html:127
+msgid "Кадиров Мухаммаджон"
+msgstr "Kadirov Muhammadjon"
+
+#: oriens/templates/app.html:149
+msgid ""
+"Адрес: Ташкентская область, город Нурафшон, СЖР Кумарык, проспект Кумарык, 23"
+msgstr ""
+"Manzil: Toshkent viloyati, Nurafshon shahri, Qumariq MFY, Qumariq shox "
+"ko'cha 23 uy"
+
+#: oriens/templates/app.html:152 oriens/templates/contact.html:32
+msgid "Телефон:"
+msgstr "Telefon:"
+
+#: oriens/templates/app.html:157
+msgid "Почта:"
+msgstr "Pochta:"
+
+#: oriens/templates/archive.html:9
+msgid "Архив всех журналов"
+msgstr "Barcha jurnallar arxivi"
+
+#: oriens/templates/archive.html:25 oriens/templates/home.html:53
+msgid ""
+"Журнал “Oriental Renaissance: Innovative, Educational, Natural and Social "
+"sciences”."
+msgstr ""
+"“Oriental Renaissance: Innovative, Educational, Natural and Social sciences” "
+"jurnali."
+
+#: oriens/templates/archive.html:25 oriens/templates/home.html:53
+msgid "Выпуск"
+msgstr "Tom"
+
+#: oriens/templates/archive.html:35 oriens/templates/conferences.html:35
+#: oriens/templates/editorial-board.html:36
+msgid "Первый"
+msgstr "Birinchi"
+
+#: oriens/templates/archive.html:71 oriens/templates/conferences.html:71
+#: oriens/templates/editorial-board.html:72
+msgid "Последний"
+msgstr "Oxirgi"
+
+#: oriens/templates/article.html:25 oriens/templates/journal.html:38
+msgid "Автор"
+msgstr "Muallif"
+
+#: oriens/templates/article.html:39 oriens/templates/conference.html:25
+#: oriens/templates/journal.html:25
+msgid "Скачать"
+msgstr "Yuklab olish"
+
+#: oriens/templates/article.html:50 oriens/templates/conference.html:46
+#: oriens/templates/journal.html:50
+msgid "Статья"
+msgstr "Maqola"
+
+#: oriens/templates/conference.html:30 oriens/templates/journal.html:30
+msgid "Статьи журнала"
+msgstr "Jurnal maqolalari"
+
+#: oriens/templates/contact.html:10
+msgid "Ваше сообщение отправлено"
+msgstr "Xabaringiz jo'natildi"
+
+#: oriens/templates/contact.html:12
+msgid "Оставьте нам своё сообщение"
+msgstr "Bizga xabar qoldiring"
+
+#: oriens/templates/contact.html:26 oriens/templates/send_article.html:37
+msgid "Отправить"
+msgstr "Jo'natish"
+
+#: oriens/templates/contact.html:28
+msgid "Или свяжитесь с нами"
+msgstr "Yoki biz bilan aloqaga chiqing"
+
+#: oriens/templates/editorial-board.html:10
+msgid "Редколлегия научного журнала ORIENS"
+msgstr "ORIENS ilmiy jurnalining tahrir hay'ati"
+
+#: oriens/templates/get_article.html:11
+msgid "Поиск статьи"
+msgstr "Maqolani topish"
+
+#: oriens/templates/get_article.html:17
+msgid "Статья под данным токеном уже оплачена"
+msgstr "Bu token ostidagi maqola uchun to'lov amalga oshirilgan"
+
+#: oriens/templates/get_article.html:22
+msgid "Статья под данным токеном не существует"
+msgstr "Bu token ostidagi maqola mavjud emas"
+
+#: oriens/templates/get_article.html:37
+msgid "Оплата статьи"
+msgstr "Maqola uchun to'lov"
+
+#: oriens/templates/get_article.html:42
+msgid "Перейти к оплате"
+msgstr "To'lovga o'tish"
+
+#: oriens/templates/home.html:25
+msgid "Давайте вместе покорим Эверест науки"
+msgstr "Ilm Everestini birga zabt etaylik"
+
+#: oriens/templates/home.html:36
+msgid "Новый выпуск"
+msgstr "Yangi son"
+
+#: oriens/templates/home.html:60
+msgid "Все выпуски"
+msgstr "Barcha sonlar"
+
+#: oriens/templates/home.html:63
+msgid ""
+"Журнал “Oriental Renaissance: Innovative, Educational, Natural and Social "
+"sciences” освещает результаты исследований в следующих областях:"
+msgstr ""
+"“Oriental Renaissance: Innovative, Educational, Natural and Social sciences” "
+"jurnali quyidagi yo'nalishlar bo'yicha tadqiqot natijalarini qamrab oladi:"
+
+#: oriens/templates/home.html:68
+msgid "Точные науки"
+msgstr "Aniq fanlar"
+
+#: oriens/templates/home.html:71
+msgid "Естественные науки"
+msgstr "Tabiiy fanlar"
+
+#: oriens/templates/home.html:74
+msgid "Технические науки"
+msgstr "Texnik fanlar"
+
+#: oriens/templates/home.html:77
+msgid "Педагогические науки"
+msgstr "Pedagogik fanlar"
+
+#: oriens/templates/home.html:82
+msgid "Социально-гуманитарные науки"
+msgstr "Ijtimoiy-gumanitar fanlar"
+
+#: oriens/templates/home.html:85
+msgid "Философские науки"
+msgstr "Falsafa fanlar"
+
+#: oriens/templates/home.html:88
+msgid "Филологические науки"
+msgstr "Filologiya"
+
+#: oriens/templates/home.html:91
+msgid "Экономические науки"
+msgstr "Iqtisodiy fanlar"
+
+#: oriens/templates/home.html:97
+msgid "О журнале"
+msgstr "Jurnal haqida"
+
+#: oriens/templates/home.html:99
+msgid ""
+"Научный журнал “Oriental Renaissance: Innovative, Educational, Natural and "
+"Social sciences” является открытым журналом. Основная задача журнала - "
+"освещать достижения и перспективы мировой науки и образования в процессе "
+"моделирования “Третьего Возрождения”, актуальные проблемы и пути их решения, "
+"а также историю и этапы развития науки и образования. Целью журнала "
+"“Oriental Renaissance: Innovative, Educational, Natural and Social sciences” "
+"является информирование научного сообщества об исследованиях и инновациях "
+"экспертов и ученых в конкретных областях, повышение интереса молодого "
+"поколения к науке и образованию и объяснять научные концепции."
+msgstr ""
+"“Oriental Renaissance: Innovative, educational, natural and social sciences” "
+"ilmiy jurnali ochiq jurnal hisoblanadi. Mazkur jurnalning asosiy vazifasi "
+"“Uchinchi renessans” modellashuvi jarayonida Jahon fani va ta'limining "
+"yutuqlari va istiqbollarini, dolzarb muammolari va ularning yechimlarini, "
+"shuningdek, ilm-fan va ta'limning tarixi va rivojlanish bosqichlarini "
+"yoritib berishdir. Shuningdek, “Oriental Renaissance: Innovative, "
+"educational, natural and social sciences” ilmiy jurnalining maqsadi ilmiy "
+"jamoatchilikni belgilangan sohalardagi mutaxassislar va olimlarning "
+"tadqiqotlari va innovatsiyalari to'g'risida xabardor qilish, yosh avlodning "
+"fan va ta'limga qiziqishini yanada oshirish va ilmiy konsepsiyalarni bayon "
+"etishdir."
+
+#: oriens/templates/requirements.html:13
+msgid "Скачать в формате docx"
+msgstr "Docx formatda yuklab olish"
+
+#: oriens/templates/requirements.html:16
+msgid "Скачать в формате pdf"
+msgstr "Pdf formatda yuklab olish"
+
+#: oriens/templates/send_article.html:5 oriens/templates/services.html:13
+msgid "Отправить статью"
+msgstr "Maqola jo'natish"
+
+#: oriens/templates/send_article.html:11
+msgid "Ваша статья принята. Мы свяжемся с вами."
+msgstr "Maqolangiz qabul qilindi. Biz o'zimiz siz bilan bog'lanamiz"
+
+#: oriens/templates/send_article.html:13
+msgid "Для осуществления оплаты вам требуется использовать данный токен: "
+msgstr "To'lovni amalga oshirish uchun quyidagi tokenni ishtalishingiz kerak: "
+
+#: oriens/templates/send_article.html:16
+msgid "Публикация статьи на сайте"
+msgstr "Maqolani saytda chop etish"
+
+#: oriens/templates/send_article.html:18
+msgid "Цена услуги: 150 000 сум"
+msgstr "Xizmat narxi: 150 000 so'm"
+
+#: oriens/templates/send_article.html:20
+msgid ""
+"Если вы желаете опубликовать свою статью на сайте, заполните форму ниже:"
+msgstr ""
+"Agar maqolangiz chop etilishini hohlasangiz, quyidagi shaklni to'ldiring:"
+
+#: oriens/templates/services.html:10
+msgid "Выберите тип услуги"
+msgstr "Xizmat turini tanlang"
+
+#: oriens/templates/services.html:16
+msgid "Оплата за публикацию статьи"
+msgstr "Maqola chop etilishi uchun to'lov amalga oshirish"

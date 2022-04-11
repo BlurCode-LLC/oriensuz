@@ -1,0 +1,104 @@
+{% extends 'app.html' %}
+{% load static i18n time_format %}
+
+{% block title %}
+    {% trans "Главная страница" %}
+{% endblock %}
+
+{% block parallax %}
+    <div class="carousel slide my_carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">        
+            <div class="carousel-item active" data-bs-interval="4000">
+                <div class="shadow-overlay"></div>
+                <img src="{% static 'img/back_1.png' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+                <div class="shadow-overlay"></div>
+                <img src="{% static 'img/back_2.png' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+                <div class="shadow-overlay"></div>
+                <img src="{% static 'img/back_3.png' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="mainscreen_div">
+                <div class="main_title">ORIENS</div>
+                <div>{% trans "Давайте вместе покорим Эверест науки" %}</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    {% get_current_language as LANGUAGE_CODE %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-6">
+                <div class="title">{% trans "Новый выпуск" %}</div>
+            </div>
+            <div class="last_posts_div">
+                <div class="last_posts__big">
+                    {% if journal %}
+                        <a class="last_posts" href="{% url 'baseapp:journal' journal.slug %}">
+                            <span class="last_posts__img">
+                                <img src="/media/{{ journal.poster }}">
+                            </span>
+                            <span class="last_posts__content">
+                                <div class="news-meta">
+                                    <span>{% time_format journal.published_date %}</span>
+                                </div>
+                                <span class="last_posts__title">
+                                    {{ journal.name }}
+                                </span>
+                                <span class="last_posts__description">
+                                    {% trans "Журнал “Oriental Renaissance: Innovative, Educational, Natural and Social sciences”." %} {% trans "Выпуск" %} {{ journal.volume }}, №{{ journal.issue }}
+                                </span>
+                            </span>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            <a href="{% url 'baseapp:archive' page=1 %}" class="btn my_btn">{% trans "Все выпуски" %}</a>
+            <div class="subjects sidebarblock mt-3">
+                <div class="subjects_title">
+                    <span>{% trans "Журнал “Oriental Renaissance: Innovative, Educational, Natural and Social sciences” освещает результаты исследований в следующих областях:" %}</span>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xl-6 col-xxl-6">
+                        <div class="subject_list">
+                            <span>{% trans "Точные науки" %}</span>
+                        </div>
+                        <div class="subject_list">
+                            <span>{% trans "Естественные науки" %}</span>
+                        </div>
+                        <div class="subject_list">
+                            <span>{% trans "Технические науки" %}</span>
+                        </div>
+                        <div class="subject_list">
+                            <span>{% trans "Педагогические науки" %}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xl-6 col-xxl-6">
+                        <div class="subject_list">
+                            <span>{% trans "Социально-гуманитарные науки" %}</span>
+                        </div>
+                        <div class="subject_list">
+                            <span>{% trans "Философские науки" %}</span>
+                        </div>
+                        <div class="subject_list">
+                            <span>{% trans "Филологические науки" %}</span>
+                        </div>
+                        <div class="subject_list">
+                            <span>{% trans "Экономические науки" %}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen_div sidebarblock mt-3">
+                <div>{% trans "О журнале" %}</div>
+                <div>
+                    {% trans "Научный журнал “Oriental Renaissance: Innovative, Educational, Natural and Social sciences” является открытым журналом. Основная задача журнала - освещать достижения и перспективы мировой науки и образования в процессе моделирования “Третьего Возрождения”, актуальные проблемы и пути их решения, а также историю и этапы развития науки и образования. Целью журнала “Oriental Renaissance: Innovative, Educational, Natural and Social sciences” является информирование научного сообщества об исследованиях и инновациях экспертов и ученых в конкретных областях, повышение интереса молодого поколения к науке и образованию и объяснять научные концепции." %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
