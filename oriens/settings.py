@@ -80,7 +80,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'uz'
+LANGUAGE_CODE = 'ru'
 
 LANGUAGES = [
     ("uz", "O'zbek"),

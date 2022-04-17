@@ -33,6 +33,9 @@
                     <p><span>Annotation:</span> {{ article.annotation_en }}</p>
                     <p><span>Keywords:</span> {{ article.keywords_en }}</p>
                 {% endif %}
+                {% if article.begin_page != 0 and article.end_page != 0 %}
+                    <p><span>{% trans "Страницы в журнале" %}:</span> {{ article.begin_page }} - {{ article.end_page }}</p>
+                {% endif %}
             </div>
         </div>
         <div class="row article">

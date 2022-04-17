@@ -14,6 +14,7 @@ admin.site.site_title = _("Администрирование сайта ORIENS"
 # Register your models here.
 admin.site.register(Index)
 admin.site.register(Editor)
+admin.site.register(Infoletter)
 admin.site.register(Journal)
 admin.site.register(JournalAuditory)
 admin.site.register(JournalArticle)

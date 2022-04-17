@@ -1,0 +1,15 @@
+{% extends 'app.html' %}
+{% load static i18n %}
+
+{% block title %}
+    {% trans "Информационное письмо" %}
+{% endblock %}
+
+{% block content %}
+    {% if letter is not None %}
+        <div class="title">{% trans "Информационное письмо от " %}{{ letter.date }}</div>
+        <a href="{{ letter.file }}" class="btn my_btn" target="_blank">Скачать</a>
+    {% else %}
+        <div class="title">{% trans "Нет загруженных файлов для этого месяца" %}</div>
+    {% endif %}
+{% endblock %}

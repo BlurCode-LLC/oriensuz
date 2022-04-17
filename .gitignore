@@ -5,6 +5,7 @@ oriens/media/conferences/*
 oriens/media/content/*
 oriens/media/editors/*
 oriens/media/indexes/*
+oriens/media/infoletters/*
 oriens/media/journalarticles/*
 oriens/media/journals/*
 oriens/media/new_articles/*
@@ -17,6 +18,7 @@ log/*
 !oriens/media/content/.gitkeep
 !oriens/media/editors/.gitkeep
 !oriens/media/indexes/.gitkeep
+!oriens/media/infoletters/.gitkeep
 !oriens/media/journalarticles/.gitkeep
 !oriens/media/journals/.gitkeep
 !oriens/media/new_articles/.gitkeep

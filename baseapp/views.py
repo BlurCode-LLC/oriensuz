@@ -1,3 +1,4 @@
+from datetime import date
 from django.conf import settings
 from django.http import Http404
 from django.shortcuts import render, redirect
@@ -65,10 +66,32 @@ def requirements(request):
 
 
 def letter(request):
-    return render(request, 'letter-' + translation.get_language() + '.html', {
-        "popular_articles": popular_articles,
-        "indexes": indexes
-    })
+    language = translation.get_language()
+    today = date.today()
+    infoletter = Infoletter.objects.filter(
+        date__month=today.month,
+        date__year=today.year
+    ).first()
+    if infoletter is not None:
+        file = infoletter.file_uz.url if language == "uz" else infoletter.file_ru.url if language == "ru" else infoletter.file_en.url if language == "en" else ""
+        return render(request, 'letter.html', {
+            "popular_articles": popular_articles,
+            "indexes": indexes,
+            "letter": {
+                'file': file,
+                'date': infoletter.date.strftime("%d.%m.%Y")
+            }
+        })
+    else:
+        return render(request, 'letter.html', {
+            "popular_articles": popular_articles,
+            "indexes": indexes,
+            "letter": None
+        })
+    # return render(request, 'letter-' + translation.get_language() + '.html', {
+    #     "popular_articles": popular_articles,
+    #     "indexes": indexes
+    # })
 
 
 def offer(request):

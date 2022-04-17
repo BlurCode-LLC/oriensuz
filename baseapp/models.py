@@ -134,6 +134,8 @@ class JournalArticle(models.Model):
     views = models.BigIntegerField("Просмотры", default=0)
     slug = models.CharField("Slug", max_length=255)
     journal = models.ForeignKey(Journal, on_delete=models.CASCADE)
+    begin_page = models.IntegerField("Страница начала", default=0)
+    end_page = models.IntegerField("Страница конца", default=0)
 
     def __str__(self):
         return self.name
@@ -296,3 +298,17 @@ class Message(models.Model):
     class Meta:
         verbose_name = "Сообщение"
         verbose_name_plural = "Сообщения"
+
+
+class Infoletter(models.Model):
+    file_uz = models.FileField("Файл (на узбекском)", upload_to="infoletters/")
+    file_ru = models.FileField("Файл (на русском)", upload_to="infoletters/")
+    file_en = models.FileField("Файл (на английском)", upload_to="infoletters/")
+    date = models.DateField("Начало месяца", auto_now=False, auto_now_add=False)
+
+    def __str__(self):
+        return self.date.strftime("%d.%m.%Y")
+
+    class Meta:
+        verbose_name = "Информационное письмо"
+        verbose_name_plural = "Информационные письма"
