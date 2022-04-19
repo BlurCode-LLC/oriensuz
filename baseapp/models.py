@@ -108,7 +108,7 @@ class Journal(models.Model):
         self.slug = "".join(slug)
         if not self.sent_to_telegram:
             indexes = " | ".join([f"<a href='{item.url}'>{item.name}</a>" for item in Index.objects.all()])
-            bot.send_photo("@oriens_test", "https://www.oriens.uz/static/img/OR.png", f"{self.name}\n\n<a href='https://oriens.uz/journal/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{indexes}\n\n@oriens_uz", "HTML")
+            bot.send_photo(global_settings.TELEGRAM_CHANNEL, "https://www.oriens.uz/static/img/OR.png", f"{self.name}\n\n<a href='https://oriens.uz/journal/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{indexes}\n\n@oriens_uz", "HTML")
             self.sent_to_telegram = True
         super().save(*args, **kwargs)
 
@@ -166,7 +166,7 @@ class JournalArticle(models.Model):
             index = len(JournalArticle.objects.filter(journal=self.journal)) + 1
             journal = f"<a href='https://oriens.uz{self.journal.file.url}'>{self.journal.name}</a>"
             indexes = " | ".join([f"<a href='{item.url}'>{item.name}</a>" for item in Index.objects.all()])
-            bot.send_message("@oriens_test", f"{index}. {self.name}\n\n<a href='https://oriens.uz/journal/article/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{journal} | {indexes}\n\n@oriens_uz", "HTML")
+            bot.send_message(global_settings.TELEGRAM_CHANNEL, f"{index}. {self.name}\n\n<a href='https://oriens.uz/journal/article/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{journal} | {indexes}\n\n@oriens_uz", "HTML")
             self.sent_to_telegram = True
         super().save(*args, **kwargs)
 
@@ -214,7 +214,7 @@ class Conference(models.Model):
         self.slug = "".join(slug)
         if not self.sent_to_telegram:
             indexes = " | ".join([f"<a href='{item.url}'>{item.name}</a>" for item in Index.objects.all()])
-            bot.send_photo("@oriens_test", "https://www.oriens.uz/static/img/OR.png", f"{self.name}\n\n<a href='https://oriens.uz/conference/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{indexes}\n\n@oriens_uz", "HTML")
+            bot.send_photo(global_settings.TELEGRAM_CHANNEL, "https://www.oriens.uz/static/img/OR.png", f"{self.name}\n\n<a href='https://oriens.uz/conference/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{indexes}\n\n@oriens_uz", "HTML")
             self.sent_to_telegram = True
         super().save(*args, **kwargs)
 
@@ -270,7 +270,7 @@ class ConferenceArticle(models.Model):
             index = len(ConferenceArticle.objects.filter(conference=self.conference)) + 1
             conference = f"<a href='https://oriens.uz{self.conference.file.url}'>{self.conference.name}</a>"
             indexes = " | ".join([f"<a href='{item.url}'>{item.name}</a>" for item in Index.objects.all()])
-            bot.send_message("@oriens_test", f"{index}. {self.name}\n\n<a href='https://oriens.uz/conference/article/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{conference} | {indexes}\n\n@oriens_uz", "HTML")
+            bot.send_message(global_settings.TELEGRAM_CHANNEL, f"{index}. {self.name}\n\n<a href='https://oriens.uz/conference/article/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{conference} | {indexes}\n\n@oriens_uz", "HTML")
             self.sent_to_telegram = True
         super().save(*args, **kwargs)
 
