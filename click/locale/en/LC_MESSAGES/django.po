@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-10 07:17+0000\n"
+"POT-Creation-Date: 2022-04-20 00:48+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,34 +18,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: click/utils.py:50
+#: .\click\utils.py:50
 msgid "Error in request from click"
 msgstr ""
 
-#: click/utils.py:62
+#: .\click\utils.py:62
 msgid "SIGN CHECK FAILED!"
 msgstr ""
 
-#: click/utils.py:68
+#: .\click\utils.py:68
 msgid "Action not found"
 msgstr ""
 
-#: click/utils.py:75
+#: .\click\utils.py:75
 msgid "User does not exist"
 msgstr ""
 
-#: click/utils.py:81
+#: .\click\utils.py:81
 msgid "Incorrect parameter amount"
 msgstr ""
 
-#: click/utils.py:87
+#: .\click\utils.py:87
 msgid "Already paid"
 msgstr ""
 
-#: click/utils.py:94
+#: .\click\utils.py:94
 msgid "Transaction not found"
 msgstr ""
 
-#: click/utils.py:100
+#: .\click\utils.py:100
 msgid "Transaction cancelled"
 msgstr ""

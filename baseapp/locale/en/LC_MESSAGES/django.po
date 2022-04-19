@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-10 07:17+0000\n"
+"POT-Creation-Date: 2022-04-20 00:48+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,72 +18,72 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: baseapp/admin.py:11 baseapp/admin.py:12
+#: .\baseapp\admin.py:11 .\baseapp\admin.py:12
 msgid "Администрирование сайта ORIENS"
 msgstr "ORIENS site administration"
 
-#: baseapp/apps.py:8
+#: .\baseapp\apps.py:8
 msgid "Основные данные"
 msgstr "Main information"
 
-#: baseapp/forms.py:6
+#: .\baseapp\forms.py:6
 msgid "Имя"
 msgstr "Name"
 
-#: baseapp/forms.py:10
+#: .\baseapp\forms.py:10
 msgid "Ваше имя"
 msgstr "Your name"
 
-#: baseapp/forms.py:16
+#: .\baseapp\forms.py:16
 msgid "E-mail"
 msgstr ""
 
-#: baseapp/forms.py:20
+#: .\baseapp\forms.py:20
 msgid "Ваш e-mail"
 msgstr "Your e-mail"
 
-#: baseapp/forms.py:26 baseapp/forms.py:30
+#: .\baseapp\forms.py:26 .\baseapp\forms.py:30
 msgid "Тема"
 msgstr "Subject"
 
-#: baseapp/forms.py:36
+#: .\baseapp\forms.py:36
 msgid "Подробнее"
 msgstr "Detail"
 
-#: baseapp/forms.py:48
+#: .\baseapp\forms.py:48
 msgid "ФИО"
 msgstr "Fullname"
 
-#: baseapp/forms.py:52
+#: .\baseapp\forms.py:52
 msgid "Ваше ФИО"
 msgstr "Your name"
 
-#: baseapp/forms.py:58
+#: .\baseapp\forms.py:58
 msgid "Номер телефона"
 msgstr "Phone number"
 
-#: baseapp/forms.py:62
+#: .\baseapp\forms.py:62
 msgid "Ваш номер телефона"
 msgstr "Your phone number"
 
-#: baseapp/forms.py:68
+#: .\baseapp\forms.py:68
 msgid "Название статьи"
 msgstr "Name of article"
 
-#: baseapp/forms.py:72
+#: .\baseapp\forms.py:72
 msgid "Название вашей статьи"
 msgstr "Name of your article"
 
-#: baseapp/forms.py:89 baseapp/forms.py:94
+#: .\baseapp\forms.py:89 .\baseapp\forms.py:94
 msgid "Токен статьи"
 msgstr "Article token"
 
-#: baseapp/views.py:57 baseapp/views.py:258 baseapp/views.py:308
-#: baseapp/views.py:332 baseapp/views.py:354 baseapp/views.py:376
-#: baseapp/views.py:400
+#: .\baseapp\views.py:58 .\baseapp\views.py:299 .\baseapp\views.py:349
+#: .\baseapp\views.py:373 .\baseapp\views.py:395 .\baseapp\views.py:417
+#: .\baseapp\views.py:441
 msgid "Страница не найдена!"
 msgstr "Page not found!"
 
-#: baseapp/views.py:233 baseapp/views.py:235
+#: .\baseapp\views.py:274 .\baseapp\views.py:276
 msgid "Данная статья не существует!"
 msgstr "This article does not exist!"

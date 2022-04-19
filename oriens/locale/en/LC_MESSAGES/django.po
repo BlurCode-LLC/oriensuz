@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-10 07:17+0000\n"
+"POT-Creation-Date: 2022-04-20 00:48+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,89 +18,92 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: oriens/templates/404.html:11 oriens/templates/404.html:19
+#: .\oriens\templates\404.html:11 .\oriens\templates\404.html:19
 msgid "Страница не найдена!"
 msgstr "Page not found!"
 
-#: oriens/templates/app.html:24 oriens/templates/home.html:5
+#: .\oriens\templates\app.html:24 .\oriens\templates\home.html:5
 msgid "Главная страница"
 msgstr "Main page"
 
-#: oriens/templates/app.html:29 oriens/templates/conferences.html:5
-#: oriens/templates/conferences.html:9
+#: .\oriens\templates\app.html:29 .\oriens\templates\conferences.html:5
+#: .\oriens\templates\conferences.html:9
 msgid "Конференции"
 msgstr "Conferences"
 
-#: oriens/templates/app.html:34 oriens/templates/interviews.html:5
+#: .\oriens\templates\app.html:34 .\oriens\templates\interviews.html:5
 msgid "Интервью"
 msgstr "Interviews"
 
-#: oriens/templates/app.html:39 oriens/templates/archive.html:5
+#: .\oriens\templates\app.html:39 .\oriens\templates\archive.html:5
 msgid "Архив"
 msgstr "Archive"
 
-#: oriens/templates/app.html:44 oriens/templates/contact.html:5
+#: .\oriens\templates\app.html:44 .\oriens\templates\contact.html:5
 msgid "Связь"
 msgstr "Contact"
 
-#: oriens/templates/app.html:89 oriens/templates/editorial-board.html:5
+#: .\oriens\templates\app.html:89 .\oriens\templates\editorial-board.html:5
 msgid "Редколлегия"
 msgstr "Editorial board"
 
-#: oriens/templates/app.html:90 oriens/templates/requirements.html:5
-#: oriens/templates/requirements.html:10
+#: .\oriens\templates\app.html:90 .\oriens\templates\requirements.html:5
+#: .\oriens\templates\requirements.html:10
 msgid "Требования к статье"
 msgstr "Article requirements"
 
-#: oriens/templates/app.html:91 oriens/templates/letter-en.html:5
-#: oriens/templates/letter-en.html:9 oriens/templates/letter-ru.html:5
-#: oriens/templates/letter-ru.html:9 oriens/templates/letter-uz.html:5
-#: oriens/templates/letter-uz.html:9
+#: .\oriens\templates\app.html:91 .\oriens\templates\letter-en.html:5
+#: .\oriens\templates\letter-en.html:9 .\oriens\templates\letter-ru.html:5
+#: .\oriens\templates\letter-ru.html:9 .\oriens\templates\letter-uz.html:5
+#: .\oriens\templates\letter-uz.html:9 .\oriens\templates\letter.html:5
 msgid "Информационное письмо"
 msgstr "Information letter"
 
-#: oriens/templates/app.html:92 oriens/templates/offer.html:5
+#: .\oriens\templates\app.html:92 .\oriens\templates\offer.html:5
 msgid "Публичная оферта"
 msgstr "Public offer"
 
-#: oriens/templates/app.html:93 oriens/templates/services.html:5
+#: .\oriens\templates\app.html:93 .\oriens\templates\services.html:5
 msgid "Услуги"
 msgstr "Services"
 
-#: oriens/templates/app.html:97
+#: .\oriens\templates\app.html:97
 msgid "Индексы журналов"
 msgstr "Journal indexes"
 
-#: oriens/templates/app.html:109
+#: .\oriens\templates\app.html:109
 msgid "Популярные статьи"
 msgstr "Public articles"
 
-#: oriens/templates/app.html:120
+#: .\oriens\templates\app.html:120
 msgid "Главный редактор"
 msgstr "Head editor"
 
-#: oriens/templates/app.html:127
+#: .\oriens\templates\app.html:127
 msgid "Кадиров Мухаммаджон"
 msgstr "Kadirov Muhammadjon"
 
-#: oriens/templates/app.html:149
-msgid ""
-"Адрес: Ташкентская область, город Нурафшон, СЖР Кумарык, проспект Кумарык, 23"
-msgstr "Address: Tashkent region, Nurafshon city, Kumaryk district, 23"
-
-#: oriens/templates/app.html:152 oriens/templates/contact.html:32
+#: .\oriens\templates\app.html:153 .\oriens\templates\contact.html:32
 msgid "Телефон:"
 msgstr "Phone:"
 
-#: oriens/templates/app.html:157
+#: .\oriens\templates\app.html:158
 msgid "Почта:"
 msgstr "Post office:"
 
-#: oriens/templates/archive.html:9
+#: .\oriens\templates\app.html:164
+msgid "ООО \"Oriental Renaissance\""
+msgstr "\"Oriental Renaissance\" LLC"
+
+#: .\oriens\templates\app.html:169
+msgid "Услуги лицензированы"
+msgstr "Services licensed"
+
+#: .\oriens\templates\archive.html:9
 msgid "Архив всех журналов"
 msgstr "Archive of all journals"
 
-#: oriens/templates/archive.html:25 oriens/templates/home.html:53
+#: .\oriens\templates\archive.html:25 .\oriens\templates\home.html:53
 msgid ""
 "Журнал “Oriental Renaissance: Innovative, Educational, Natural and Social "
 "sciences”."
@@ -108,91 +111,97 @@ msgstr ""
 "The journal “Oriental Renaissance: Innovative, Educational, Natural and "
 "Social sciences“.:"
 
-#: oriens/templates/archive.html:25 oriens/templates/home.html:53
+#: .\oriens\templates\archive.html:25 .\oriens\templates\home.html:53
 msgid "Выпуск"
 msgstr "Volume"
 
-#: oriens/templates/archive.html:35 oriens/templates/conferences.html:35
-#: oriens/templates/editorial-board.html:36
+#: .\oriens\templates\archive.html:35 .\oriens\templates\conferences.html:35
+#: .\oriens\templates\editorial-board.html:36
 msgid "Первый"
 msgstr "First"
 
-#: oriens/templates/archive.html:71 oriens/templates/conferences.html:71
-#: oriens/templates/editorial-board.html:72
+#: .\oriens\templates\archive.html:71 .\oriens\templates\conferences.html:71
+#: .\oriens\templates\editorial-board.html:72
 msgid "Последний"
 msgstr "Last"
 
-#: oriens/templates/article.html:25 oriens/templates/journal.html:38
+#: .\oriens\templates\article.html:25 .\oriens\templates\journal.html:38
 msgid "Автор"
 msgstr "Author"
 
-#: oriens/templates/article.html:39 oriens/templates/conference.html:25
-#: oriens/templates/journal.html:25
+#: .\oriens\templates\article.html:37
+#, fuzzy
+#| msgid "Статьи журнала"
+msgid "Страницы в журнале"
+msgstr "Journal articles"
+
+#: .\oriens\templates\article.html:42 .\oriens\templates\conference.html:25
+#: .\oriens\templates\journal.html:25
 msgid "Скачать"
 msgstr "Download"
 
-#: oriens/templates/article.html:50 oriens/templates/conference.html:46
-#: oriens/templates/journal.html:50
+#: .\oriens\templates\article.html:53 .\oriens\templates\conference.html:46
+#: .\oriens\templates\journal.html:50
 msgid "Статья"
 msgstr "Article"
 
-#: oriens/templates/conference.html:30 oriens/templates/journal.html:30
+#: .\oriens\templates\conference.html:30 .\oriens\templates\journal.html:30
 msgid "Статьи журнала"
 msgstr "Journal articles"
 
-#: oriens/templates/contact.html:10
+#: .\oriens\templates\contact.html:10
 msgid "Ваше сообщение отправлено"
 msgstr "Your message is sent"
 
-#: oriens/templates/contact.html:12
+#: .\oriens\templates\contact.html:12
 msgid "Оставьте нам своё сообщение"
 msgstr "Leave us your message"
 
-#: oriens/templates/contact.html:26 oriens/templates/send_article.html:37
+#: .\oriens\templates\contact.html:26 .\oriens\templates\send_article.html:35
 msgid "Отправить"
 msgstr "Submit"
 
-#: oriens/templates/contact.html:28
+#: .\oriens\templates\contact.html:28
 msgid "Или свяжитесь с нами"
 msgstr "Or contact us"
 
-#: oriens/templates/editorial-board.html:10
+#: .\oriens\templates\editorial-board.html:10
 msgid "Редколлегия научного журнала ORIENS"
 msgstr "Editorial board of scientific journal ORIENS"
 
-#: oriens/templates/get_article.html:11
+#: .\oriens\templates\get_article.html:11
 msgid "Поиск статьи"
 msgstr "Article search"
 
-#: oriens/templates/get_article.html:17
+#: .\oriens\templates\get_article.html:17
 msgid "Статья под данным токеном уже оплачена"
 msgstr "Article linked to this token has already been paid"
 
-#: oriens/templates/get_article.html:22
+#: .\oriens\templates\get_article.html:22
 msgid "Статья под данным токеном не существует"
 msgstr "Article linked to this token does not exist"
 
-#: oriens/templates/get_article.html:37
+#: .\oriens\templates\get_article.html:37
 msgid "Оплата статьи"
 msgstr "Article payment"
 
-#: oriens/templates/get_article.html:42
+#: .\oriens\templates\get_article.html:42
 msgid "Перейти к оплате"
 msgstr "Pay"
 
-#: oriens/templates/home.html:25
+#: .\oriens\templates\home.html:25
 msgid "Давайте вместе покорим Эверест науки"
 msgstr "Let's conquer the Everest of Science together"
 
-#: oriens/templates/home.html:36
+#: .\oriens\templates\home.html:36
 msgid "Новый выпуск"
 msgstr "New issue"
 
-#: oriens/templates/home.html:60
+#: .\oriens\templates\home.html:60
 msgid "Все выпуски"
 msgstr "All issues"
 
-#: oriens/templates/home.html:63
+#: .\oriens\templates\home.html:63
 msgid ""
 "Журнал “Oriental Renaissance: Innovative, Educational, Natural and Social "
 "sciences” освещает результаты исследований в следующих областях:"
@@ -200,43 +209,43 @@ msgstr ""
 "The journal “Oriental Renaissance: Innovative, Educational, Natural and "
 "Social sciences“ covers the results of research in the following areas:"
 
-#: oriens/templates/home.html:68
+#: .\oriens\templates\home.html:68
 msgid "Точные науки"
 msgstr "Exact sciences"
 
-#: oriens/templates/home.html:71
+#: .\oriens\templates\home.html:71
 msgid "Естественные науки"
 msgstr "Natural sciences"
 
-#: oriens/templates/home.html:74
+#: .\oriens\templates\home.html:74
 msgid "Технические науки"
 msgstr "Technical sciences"
 
-#: oriens/templates/home.html:77
+#: .\oriens\templates\home.html:77
 msgid "Педагогические науки"
 msgstr "Pedagogical sciences"
 
-#: oriens/templates/home.html:82
+#: .\oriens\templates\home.html:82
 msgid "Социально-гуманитарные науки"
 msgstr "Social sciences and humanities"
 
-#: oriens/templates/home.html:85
+#: .\oriens\templates\home.html:85
 msgid "Философские науки"
 msgstr "Philosophical sciences"
 
-#: oriens/templates/home.html:88
+#: .\oriens\templates\home.html:88
 msgid "Филологические науки"
 msgstr "Filologic sciences"
 
-#: oriens/templates/home.html:91
+#: .\oriens\templates\home.html:91
 msgid "Экономические науки"
 msgstr "Economic sciences"
 
-#: oriens/templates/home.html:97
+#: .\oriens\templates\home.html:97
 msgid "О журнале"
 msgstr "About journal"
 
-#: oriens/templates/home.html:99
+#: .\oriens\templates\home.html:99
 msgid ""
 "Научный журнал “Oriental Renaissance: Innovative, Educational, Natural and "
 "Social sciences” является открытым журналом. Основная задача журнала - "
@@ -259,44 +268,50 @@ msgstr ""
 "scientists in specific fields, to increase the interest of the younger "
 "generation in science and education, and to explain scientific concepts."
 
-#: oriens/templates/requirements.html:13
+#: .\oriens\templates\letter.html:10
+#, fuzzy
+#| msgid "Информационное письмо"
+msgid "Информационное письмо от "
+msgstr "Information letter"
+
+#: .\oriens\templates\letter.html:13
+msgid "Нет загруженных файлов для этого месяца"
+msgstr "No files for this month"
+
+#: .\oriens\templates\requirements.html:13
 msgid "Скачать в формате docx"
 msgstr "Download in docx"
 
-#: oriens/templates/requirements.html:16
+#: .\oriens\templates\requirements.html:16
 msgid "Скачать в формате pdf"
 msgstr "Download in pdf"
 
-#: oriens/templates/send_article.html:5 oriens/templates/services.html:13
+#: .\oriens\templates\send_article.html:5 .\oriens\templates\services.html:13
 msgid "Отправить статью"
 msgstr "Send article"
 
-#: oriens/templates/send_article.html:11
+#: .\oriens\templates\send_article.html:11
 msgid "Ваша статья принята. Мы свяжемся с вами."
 msgstr "Your article has been received. We will contact you."
 
-#: oriens/templates/send_article.html:13
+#: .\oriens\templates\send_article.html:13
 msgid "Для осуществления оплаты вам требуется использовать данный токен: "
 msgstr "In order to pay for publishing article you need to use this token: "
 
-#: oriens/templates/send_article.html:16
+#: .\oriens\templates\send_article.html:16
 msgid "Публикация статьи на сайте"
 msgstr "Publishing article on this website"
 
-#: oriens/templates/send_article.html:18
-msgid "Цена услуги: 150 000 сум"
-msgstr "Service price: 150 000 sum"
-
-#: oriens/templates/send_article.html:20
+#: .\oriens\templates\send_article.html:18
 msgid ""
 "Если вы желаете опубликовать свою статью на сайте, заполните форму ниже:"
 msgstr ""
 "If you want to publish your article here, you need to fill the form below:"
 
-#: oriens/templates/services.html:10
+#: .\oriens\templates\services.html:10
 msgid "Выберите тип услуги"
 msgstr "Choose service type"
 
-#: oriens/templates/services.html:16
+#: .\oriens\templates\services.html:16
 msgid "Оплата за публикацию статьи"
 msgstr "Pay for releasing your article"

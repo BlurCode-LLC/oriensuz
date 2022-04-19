@@ -145,16 +145,28 @@
                         </div>
                     </div>
                     <div class="col-md-9">
-                        <div class="footer_data">
+                        {% comment %} <div class="footer_data">
                             {% trans "Адрес: Ташкентская область, город Нурафшон, СЖР Кумарык, проспект Кумарык, 23" %}
-                        </div>
+                        </div> {% endcomment %}
                         <div class="footer_data">
                             {% trans "Телефон:" %} <a href="tel:+998990841423">+998990841423</a><br>
                             <a href="tel:+998998288040">+998998288040</a><br>
                             <a href="tel:+998998990964">+998998990964</a>
                         </div>
                         <div class="footer_data">
-                            {% trans "Почта:" %} <a href="mailto:academic.reserch@mail.ru">info@oriens.uz</a>
+                            {% trans "Почта:" %} <a href="mailto:info@oriens.uz">info@oriens.uz</a>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-3">
+                            <div class="footer_data">
+                                {% trans 'ООО "Oriental Renaissance"' %}
+                            </div>
+                        </div>
+                        <div class="col-md-3 offset-md-6 float-end">
+                            <div class="footer_data">
+                                {% trans "Услуги лицензированы" %}
+                            </div>
                         </div>
                     </div>
                 </div>

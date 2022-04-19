@@ -130,3 +130,5 @@ PAYMENT_VARIANTS = {
 }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+TELEGRAM_BOT_TOKEN = config('TELEGRAM_BOT_TOKEN')

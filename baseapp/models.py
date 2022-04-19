@@ -1,5 +1,8 @@
+from django.conf import settings as global_settings
 from django.db import models
 from payments.models import BasePayment
+from requests import request
+from telebot import TeleBot
 
 
 symbols = [
@@ -41,6 +44,7 @@ translations = {
     '\u042e': 'yu', '\u044e': 'yu',
     '\u042f': 'ya', '\u044f': 'ya'
 }
+bot = TeleBot(global_settings.TELEGRAM_BOT_TOKEN)
 
 
 class Index(models.Model):
@@ -84,7 +88,8 @@ class Journal(models.Model):
     poster = models.ImageField("Постер журнала", upload_to="posters/", max_length=255)
     published_date = models.DateTimeField("Дата публикации журнала", auto_now=False, auto_now_add=False)
     views = models.BigIntegerField("Просмотры", default=0)
-    slug = models.CharField("Slug", max_length=255)
+    slug = models.CharField("Slug", max_length=255, blank=True, null=True)
+    sent_to_telegram = models.BooleanField("Отправлен в телеграм?", default=False)
 
     def __str__(self):
         return f"Том: {self.volume} Выпуск: {self.issue}"
@@ -101,6 +106,10 @@ class Journal(models.Model):
             else:
                 slug[i] = slug[i].lower()
         self.slug = "".join(slug)
+        if not self.sent_to_telegram:
+            indexes = " | ".join([f"<a href='{item.url}'>{item.name}</a>" for item in Index.objects.all()])
+            bot.send_photo("@oriens_test", "https://www.oriens.uz/static/img/OR.png", f"{self.name}\n\n<a href='https://oriens.uz/journal/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{indexes}\n\n@oriens_uz", "HTML")
+            self.sent_to_telegram = True
         super().save(*args, **kwargs)
 
     class Meta:
@@ -132,10 +141,11 @@ class JournalArticle(models.Model):
     file = models.FileField("Файл статьи", upload_to="journalarticles/", max_length=255)
     published_date = models.DateTimeField("Дата публикации статьи", auto_now=False, auto_now_add=True)
     views = models.BigIntegerField("Просмотры", default=0)
-    slug = models.CharField("Slug", max_length=255)
+    slug = models.CharField("Slug", max_length=255, blank=True, null=True)
     journal = models.ForeignKey(Journal, on_delete=models.CASCADE)
     begin_page = models.IntegerField("Страница начала", default=0)
     end_page = models.IntegerField("Страница конца", default=0)
+    sent_to_telegram = models.BooleanField("Отправлен в телеграм?", default=False)
 
     def __str__(self):
         return self.name
@@ -152,6 +162,12 @@ class JournalArticle(models.Model):
             else:
                 slug[i] = slug[i].lower()
         self.slug = "".join(slug)
+        if not self.sent_to_telegram:
+            index = len(JournalArticle.objects.filter(journal=self.journal)) + 1
+            journal = f"<a href='https://oriens.uz{self.journal.file.url}'>{self.journal.name}</a>"
+            indexes = " | ".join([f"<a href='{item.url}'>{item.name}</a>" for item in Index.objects.all()])
+            bot.send_message("@oriens_test", f"{index}. {self.name}\n\n<a href='https://oriens.uz/journal/article/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{journal} | {indexes}\n\n@oriens_uz", "HTML")
+            self.sent_to_telegram = True
         super().save(*args, **kwargs)
 
     class Meta:
@@ -178,7 +194,8 @@ class Conference(models.Model):
     poster = models.ImageField("Постер конференции", upload_to="posters/", max_length=255)
     published_date = models.DateTimeField("Дата публикации конференции", auto_now=False, auto_now_add=True)
     views = models.BigIntegerField("Просмотры", default=0)
-    slug = models.CharField("Slug", max_length=255)
+    slug = models.CharField("Slug", max_length=255, blank=True, null=True)
+    sent_to_telegram = models.BooleanField("Отправлен в телеграм?", default=False)
 
     def __str__(self):
         return self.name
@@ -195,6 +212,10 @@ class Conference(models.Model):
             else:
                 slug[i] = slug[i].lower()
         self.slug = "".join(slug)
+        if not self.sent_to_telegram:
+            indexes = " | ".join([f"<a href='{item.url}'>{item.name}</a>" for item in Index.objects.all()])
+            bot.send_photo("@oriens_test", "https://www.oriens.uz/static/img/OR.png", f"{self.name}\n\n<a href='https://oriens.uz/conference/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{indexes}\n\n@oriens_uz", "HTML")
+            self.sent_to_telegram = True
         super().save(*args, **kwargs)
 
     class Meta:
@@ -226,8 +247,9 @@ class ConferenceArticle(models.Model):
     file = models.FileField("Файл статьи", upload_to="conferencearticles/", max_length=255)
     published_date = models.DateTimeField("Дата публикации статьи", auto_now=False, auto_now_add=True)
     views = models.BigIntegerField("Просмотры", default=0)
-    slug = models.CharField("Slug", max_length=255)
+    slug = models.CharField("Slug", max_length=255, blank=True, null=True)
     conference = models.ForeignKey(Conference, on_delete=models.CASCADE)
+    sent_to_telegram = models.BooleanField("Отправлен в телеграм?", default=False)
 
     def __str__(self):
         return self.name
@@ -244,6 +266,12 @@ class ConferenceArticle(models.Model):
             else:
                 slug[i] = slug[i].lower()
         self.slug = "".join(slug)
+        if not self.sent_to_telegram:
+            index = len(ConferenceArticle.objects.filter(conference=self.conference)) + 1
+            conference = f"<a href='https://oriens.uz{self.conference.file.url}'>{self.conference.name}</a>"
+            indexes = " | ".join([f"<a href='{item.url}'>{item.name}</a>" for item in Index.objects.all()])
+            bot.send_message("@oriens_test", f"{index}. {self.name}\n\n<a href='https://oriens.uz/conference/article/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{conference} | {indexes}\n\n@oriens_uz", "HTML")
+            self.sent_to_telegram = True
         super().save(*args, **kwargs)
 
     class Meta:
