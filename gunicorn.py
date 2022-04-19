@@ -1,7 +1,7 @@
 import multiprocessing
 
 workers = multiprocessing.cpu_count() * 2 + 1
-bind = '127.0.0.1:8000'
+bind = '127.0.0.1:8001'
 timeout = 3600
 accesslog = 'log/access.log'
 errorlog = 'log/error.log'
