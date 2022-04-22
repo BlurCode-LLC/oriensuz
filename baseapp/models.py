@@ -130,8 +130,8 @@ class JournalAuditory(models.Model):
 
 
 class JournalArticle(models.Model):
-    name = models.CharField("Название статьи", max_length=255)
-    author = models.CharField("Автор статьи", max_length=255)
+    name = models.TextField("Название статьи")
+    author = models.TextField("Автор статьи")
     keywords_uz = models.TextField("Ключевые слова (на узбекском)")
     annotation_uz = models.TextField("Аннотация (на узбекском)")
     keywords_ru = models.TextField("Ключевые слова (на русском)")
@@ -163,10 +163,10 @@ class JournalArticle(models.Model):
                 slug[i] = slug[i].lower()
         self.slug = "".join(slug)
         if not self.sent_to_telegram:
-            index = len(JournalArticle.objects.filter(journal=self.journal)) + 1
+            index = len(JournalArticle.objects.filter(journal=self.journal, sent_to_telegram=True)) + 1
             journal = f"<a href='https://oriens.uz{self.journal.file.url}'>{self.journal.name}</a>"
             indexes = " | ".join([f"<a href='{item.url}'>{item.name}</a>" for item in Index.objects.all()])
-            bot.send_message(global_settings.TELEGRAM_CHANNEL, f"{index}. {self.name}\n\n<a href='https://oriens.uz/journal/article/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{journal} | {indexes}\n\n@oriens_uz", "HTML")
+            bot.send_photo(global_settings.TELEGRAM_CHANNEL, "https://www.oriens.uz/static/img/OR.png", f"{journal}\n\n{index}. {self.author}. {self.name}. {self.begin_page}-{self.end_page}\n\n<a href='https://oriens.uz/journal/article/{self.slug}'>Saytda🌐</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish⬇️</a>\n\n{indexes}\n\n@oriens_uz", "HTML")
             self.sent_to_telegram = True
         super().save(*args, **kwargs)
 
@@ -236,8 +236,8 @@ class ConferenceAuditory(models.Model):
 
 
 class ConferenceArticle(models.Model):
-    name = models.CharField("Название статьи", max_length=255)
-    author = models.CharField("Автор статьи", max_length=255)
+    name = models.TextField("Название статьи")
+    author = models.TextField("Автор статьи")
     keywords_uz = models.TextField("Ключевые слова (на узбекском)")
     annotation_uz = models.TextField("Аннотация (на узбекском)")
     keywords_ru = models.TextField("Ключевые слова (на русском)")
@@ -267,10 +267,10 @@ class ConferenceArticle(models.Model):
                 slug[i] = slug[i].lower()
         self.slug = "".join(slug)
         if not self.sent_to_telegram:
-            index = len(ConferenceArticle.objects.filter(conference=self.conference)) + 1
+            index = len(ConferenceArticle.objects.filter(conference=self.conference, sent_to_telegram=True)) + 1
             conference = f"<a href='https://oriens.uz{self.conference.file.url}'>{self.conference.name}</a>"
             indexes = " | ".join([f"<a href='{item.url}'>{item.name}</a>" for item in Index.objects.all()])
-            bot.send_message(global_settings.TELEGRAM_CHANNEL, f"{index}. {self.name}\n\n<a href='https://oriens.uz/conference/article/{self.slug}'>Saytda</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish</a>\n\n{conference} | {indexes}\n\n@oriens_uz", "HTML")
+            bot.send_photo(global_settings.TELEGRAM_CHANNEL, "https://www.oriens.uz/static/img/OR.png", f"{conference}\n\n{index}. {self.author}. {self.name}\n\n<a href='https://oriens.uz/conference/article/{self.slug}'>Saytda🌐</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish⬇️</a>\n\n{indexes}\n\n@oriens_uz", "HTML")
             self.sent_to_telegram = True
         super().save(*args, **kwargs)
 
