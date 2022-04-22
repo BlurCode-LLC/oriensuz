@@ -15,13 +15,13 @@ class JournalAdmin(admin.ModelAdmin):
     list_display = ("name", "published_date", "views", "sent_to_telegram")
 
 class JournalArticleAdmin(admin.ModelAdmin):
-    list_display = ("name", "author", "published_date", "views", "begin_page", "end_page", "sent_to_telegram")
+    list_display = ("name", "journal", "author", "published_date", "views", "begin_page", "end_page", "sent_to_telegram")
 
 class ConferenceAdmin(admin.ModelAdmin):
     list_display = ("name", "published_date", "views", "sent_to_telegram")
 
 class ConferenceArticleAdmin(admin.ModelAdmin):
-    list_display = ("name", "author", "published_date", "views", "begin_page", "end_page", "sent_to_telegram")
+    list_display = ("name", "conference", "author", "published_date", "views", "begin_page", "end_page", "sent_to_telegram")
 
 admin.site.register(Index)
 admin.site.register(Editor)
