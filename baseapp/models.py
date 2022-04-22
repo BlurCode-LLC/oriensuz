@@ -162,13 +162,18 @@ class JournalArticle(models.Model):
             else:
                 slug[i] = slug[i].lower()
         self.slug = "".join(slug)
+        super().save(*args, **kwargs)
         if not self.sent_to_telegram:
-            index = len(JournalArticle.objects.filter(journal=self.journal, sent_to_telegram=True)) + 1
+            index = 1
+            for item in JournalArticle.objects.filter(journal=self.journal).order_by("published_date"):
+                if item.id == self.id:
+                    break
+                index += 1
             journal = f"<a href='https://oriens.uz{self.journal.file.url}'>{self.journal.name}</a>"
             indexes = " | ".join([f"<a href='{item.url}'>{item.name}</a>" for item in Index.objects.all()])
             bot.send_photo(global_settings.TELEGRAM_CHANNEL, "https://www.oriens.uz/static/img/OR.png", f"{journal}\n\n{index}. {self.author}. {self.name}. {self.begin_page}-{self.end_page}\n\n<a href='https://oriens.uz/journal/article/{self.slug}'>Saytda🌐</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish⬇️</a>\n\n{indexes}\n\n@oriens_uz", "HTML")
             self.sent_to_telegram = True
-        super().save(*args, **kwargs)
+            self.save()
 
     class Meta:
         verbose_name = "Статья журнала"
@@ -249,6 +254,8 @@ class ConferenceArticle(models.Model):
     views = models.BigIntegerField("Просмотры", default=0)
     slug = models.CharField("Slug", max_length=255, blank=True, null=True)
     conference = models.ForeignKey(Conference, on_delete=models.CASCADE)
+    begin_page = models.IntegerField("Страница начала", default=0)
+    end_page = models.IntegerField("Страница конца", default=0)
     sent_to_telegram = models.BooleanField("Отправлен в телеграм?", default=False)
 
     def __str__(self):
@@ -266,13 +273,18 @@ class ConferenceArticle(models.Model):
             else:
                 slug[i] = slug[i].lower()
         self.slug = "".join(slug)
+        super().save(*args, **kwargs)
         if not self.sent_to_telegram:
-            index = len(ConferenceArticle.objects.filter(conference=self.conference, sent_to_telegram=True)) + 1
+            index = 1
+            for item in ConferenceArticle.objects.filter(conference=self.conference).order_by("published_date"):
+                if item.id == self.id:
+                    break
+                index += 1
             conference = f"<a href='https://oriens.uz{self.conference.file.url}'>{self.conference.name}</a>"
             indexes = " | ".join([f"<a href='{item.url}'>{item.name}</a>" for item in Index.objects.all()])
             bot.send_photo(global_settings.TELEGRAM_CHANNEL, "https://www.oriens.uz/static/img/OR.png", f"{conference}\n\n{index}. {self.author}. {self.name}\n\n<a href='https://oriens.uz/conference/article/{self.slug}'>Saytda🌐</a>\n<a href='https://oriens.uz{self.file.url}'>Yuklab olish⬇️</a>\n\n{indexes}\n\n@oriens_uz", "HTML")
             self.sent_to_telegram = True
-        super().save(*args, **kwargs)
+            self.save()
 
     class Meta:
         verbose_name = "Статья конференции"

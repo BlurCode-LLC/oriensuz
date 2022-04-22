@@ -11,17 +11,28 @@ class PaymentAdmin(admin.ModelAdmin):
 admin.site.site_header = _("Администрирование сайта ORIENS")
 admin.site.site_title = _("Администрирование сайта ORIENS")
 
-# Register your models here.
+class JournalAdmin(admin.ModelAdmin):
+    list_display = ("name", "published_date", "views", "sent_to_telegram")
+
+class JournalArticleAdmin(admin.ModelAdmin):
+    list_display = ("name", "author", "published_date", "views", "begin_page", "end_page", "sent_to_telegram")
+
+class ConferenceAdmin(admin.ModelAdmin):
+    list_display = ("name", "published_date", "views", "sent_to_telegram")
+
+class ConferenceArticleAdmin(admin.ModelAdmin):
+    list_display = ("name", "author", "published_date", "views", "begin_page", "end_page", "sent_to_telegram")
+
 admin.site.register(Index)
 admin.site.register(Editor)
 admin.site.register(Infoletter)
-admin.site.register(Journal)
+admin.site.register(Journal, JournalAdmin)
 admin.site.register(JournalAuditory)
-admin.site.register(JournalArticle)
+admin.site.register(JournalArticle, JournalArticleAdmin)
 admin.site.register(JournalArticleAuditory)
-admin.site.register(Conference)
+admin.site.register(Conference, ConferenceAdmin)
 admin.site.register(ConferenceAuditory)
-admin.site.register(ConferenceArticle)
+admin.site.register(ConferenceArticle, ConferenceArticleAdmin)
 admin.site.register(ConferenceArticleAuditory)
 admin.site.register(Message)
 admin.site.register(NewArticle)

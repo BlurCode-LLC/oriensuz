@@ -362,7 +362,7 @@ def journal(request, slug):
             user.save()
             journal.views = len(JournalAuditory.objects.filter(Q(journal=journal)))
             journal.save()
-        articles = JournalArticle.objects.filter(journal=journal)
+        articles = JournalArticle.objects.filter(journal=journal).order_by("published_date")
         return render(request, 'journal.html', {
             "journal": journal,
             "articles": articles,
